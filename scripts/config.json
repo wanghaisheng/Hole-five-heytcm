@@ -4,6 +4,8 @@
   "email":"support@heytcm.com",
   "apptype":"game app",
   "localepath":"locale",
+  "clarityId":"rgui5f0wd1",
+  "googleAnalyticsId":"G-GQGWC4WF09",
   "robots": {
     "allowedBots": [
       "Googlebot",
