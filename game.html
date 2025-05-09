@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五行天坑 - Hole Wuxing - The Game</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/landing/favicon.png" type="image/png">
+</head>
+<body>
+    <div id="game-container">
+        <header id="collection-bay">
+            <!-- Collection slots will be dynamically added here -->
+            <!-- Example: <div class="collection-slot" data-element="WOOD">木: 0 / 10</div> -->
+        </header>
+
+        <main id="game-board">
+            <!-- Target Holes, Obstacles, and People will be dynamically added here -->
+            <!-- Example Target Hole: <div class="hole target-hole" data-element="WOOD" style="top:100px; left:100px;"></div> -->
+            <!-- Example Obstacle: <div class="obstacle wood-obstacle" style="top:200px; left:200px;"></div> -->
+        </main>
+
+        <footer id="source-bay">
+            <!-- Source Holes will be dynamically added here -->
+            <!-- Example Source Hole: <div class="hole source-hole" data-element="WOOD"></div> -->
+        </footer>
+
+        <div id="ufo-container">
+            <img id="ufo" src="ufo.png" alt="UFO Collector">
+        </div>
+
+        <div id="temp-message" class="hidden"></div>
+        <button id="reset-level-button">Reset Level</button>
+        <button id="back-to-menu-button">Back to Menu</button>
+        <div id="level-complete-message" class="hidden">
+            <h2>Level Complete!</h2>
+            <p>五行归位!</p>
+            <button id="next-level-button">Next Level</button>
+        </div>
+    </div>
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script src="js/bootstrap-scripts.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

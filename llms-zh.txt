@@ -1,73 +1,95 @@
-# WebSim Vibe Coding Starter - 网站完整介绍
-> WebSim Vibe Coding Starter：5分钟构建一个现代化的、SEO优化的网站。AI赋能、极致自动化、响应式、SEO最佳实践、极具创意与未来感的SaaS工具。
+# 五行天坑 - 神秘益智冒险
+> 掌握元素，解开路径！在这款引人入胜的益智冒险游戏中，拖放并发现五行（金、木、水、火、土）的力量。
 
 ## 网站背景
-WebSim Vibe Coding Starter 专为创业者、产品经理和编程经验有限的创新者打造。无需代码基础，5分钟内即可验证你的商业想法，快速上线专业网站。内置 SaaS 工具、游戏类 App 落地页与原型设计提示词模板、SEO 优化 prompt 及常用自动化脚本，助你高效实现从创意到落地。
+五行天坑是一款休闲益智策略游戏，其灵感来源于中国传统的五行哲学。玩家通过直观的拖放操作，引导元素精灵进入对应的洞穴。游戏旨在提供一种轻松且锻炼思维的体验，将简单的机制与植根于元素相生相克循环的深层策略相结合。它专为益智游戏爱好者和对文化主题游戏感兴趣的玩家设计，可直接在网页浏览器中进行游戏。
 
-## 主要网址说明（根据 sitemap.xml）
-- https://websimstarter.borninsea.com/
-  - WebSim Vibe Coding Starter 的主登陆页面。
-- https://websimstarter.borninsea.com/#features
-  - 详细介绍该入门套件功能的区域。
-- https://websimstarter.borninsea.com/#playground
-  - 体验工作流程的互动实验区。
-- https://websimstarter.borninsea.com/#showcase
-  - 使用 WebSim Vibe 构建的项目展示。
-- https://websimstarter.borninsea.com/#future
-  - 未来发展和优势展望。
-- https://websimstarter.borninsea.com/about.html
-  - 关于团队和项目的信息。
-- https://websimstarter.borninsea.com/career.html
-  - 工作机会。
-- https://websimstarter.borninsea.com/privacy.html
-  - 详细说明应用程序的隐私政策。
-- https://websimstarter.borninsea.com/terms.html
-  - 概述服务条款。
+## 主要网址 (根据 sitemap.xml 及网站结构)
+- https://hole5.heytcm.com/zh/
+  - 五行天坑游戏中文版主登陆页面。
+- https://hole5.heytcm.com/zh/#features
+  - 详细介绍核心游戏特色的区域。
+- https://hole5.heytcm.com/zh/#how-to-play
+  - 解释游戏玩法的区域。
+- https://hole5.heytcm.com/zh/#gameplay
+  - 游戏实际操作预览区 (例如视频/GIF动图)。
+- https://hole5.heytcm.com/zh/#community
+  - 社区链接与信息区。
+- https://hole5.heytcm.com/zh/#faq
+  - 提供常见问题解答的区域。
+- https://hole5.heytcm.com/zh/game
+  - 游戏主界面 (中文版)。
+- https://hole5.heytcm.com/zh/level_select
+  - 关卡选择页面 (中文版)。
+- https://hole5.heytcm.com/zh/menu
+  - 游戏主菜单 (中文版)。
+- https://hole5.heytcm.com/zh/privacy
+  - 游戏隐私政策页面 (中文版)。
+- https://hole5.heytcm.com/zh/terms
+  - 游戏服务条款页面 (中文版)。
+- https://hole5.heytcm.com/
+  - 游戏英文版主登陆页面。
+- (其他英文版对应页面如 menu, level_select, game, privacy, terms 也存在)
 
 ## 内容分类详情
-### [首页](https://websimstarter.borninsea.com/)
-介绍 WebSim Vibe Coding Starter、其宗旨和核心价值主张。强调无代码开发和快速部署等主要优势。
+### [首页](https://hole5.heytcm.com/zh/)
+介绍"五行天坑"游戏，其神秘主题和核心益智冒险。展示主要特色、玩法介绍、无障碍设计，并邀请用户"马上开玩！"
 
-### [功能特性](https://websimstarter.borninsea.com/#features)
-列出主要功能，包括：
-- 🪄 无需编程，自动生成全站
-- 🚀 5分钟快速验证产品概念
-- 💡 创业者/产品经理友好
-- 📝 SaaS/游戏App落地页与原型设计 Prompt 模板
-- 🔍 SEO 优化专用 Prompt 模板
-- ⚙️ 常用自动化脚本（生成、部署、SEO 提交）
-- 🌍 多语言支持 & 自动生成站点地图
-- 🔍 自动化SEO：IndexNow, Bing, Google,元数据,验证
-- 🤖 AI驱动的博客 & 图片生成
-- 📱 PWA & 移动优先，速度极快
-- 🔑 关键词研究，分析，清晰度
-- 👤 真实用户管理 (Cloudflare Workers)
-- 🤖 AI Scraper 友好的 robots.txt & llms.txt 自动生成
+### [功能特性](https://hole5.heytcm.com/zh/#features)
+详细说明主要的游戏元素：
+- **五行系统：** 探索金、木、水、火、土之间的复杂关系。
+- **趣味谜题：** 拖放可爱的元素精灵，解决越来越复杂的关卡。
+- **神秘收集：** UFO 会收集填满洞穴的精灵，以达成关卡目标。
 
-### [互动实验区](https://websimstarter.borninsea.com/#playground)
-一个四步引导体验：
-1.  **Grok调研**：研究用户抱怨和痛点。
-2.  **用 Google AI Studio 生成 PRD.md**：创建产品需求文档。
-3.  **用 WebSim 生成网站**：使用 PRD 和提示生成网站。
-4.  **部署上线**：将网站部署到 Cloudflare 或静态主机。
+### [如何游戏](https://hole5.heytcm.com/zh/#how-to-play)
+解释游戏机制：
+- **拖拽组合：** 点击并拖拽一群元素精灵。
+- **匹配填充：** 引导精灵到相同元素的目标洞穴中。
+- **UFO收集：** 一旦洞穴填满，UFO 会前来收集精灵。
+- **元素之力：** 利用五行相生相克来清除障碍或获得奖励。
 
-### [案例展示](https://websimstarter.borninsea.com/#showcase)
-展示使用 WebSim Vibe Coding Starter 构建的网站和应用程序示例，例如 AI SaaS 登陆页面和多语言博客。
+### [游戏演示](https://hole5.heytcm.com/zh/#gameplay)
+此区域用于展示游戏实际玩法，目前为视频或GIF动图的占位符。
 
-### [未来展望](https://websimstarter.borninsea.com/#future)
-概述未来优势和项目愿景，包括：
-- 持续的 AI 集成：更智能、更具创意的网站生成
-- SEO 自动化：始终与最新算法保持同步
-- 大胆、创意的 UI/UX：GSAP 驱动的微交互和动画
-- 从 MVP 到企业级的可扩展性
+### [随时畅玩](https://hole5.heytcm.com/zh/#play-anywhere)
+强调"五行天坑"是一款网页游戏，无需下载，可直接在大多数现代桌面设备、笔记本电脑、平板和智能手机的浏览器中即时畅玩。
+
+### [无障碍设计](https://hole5.heytcm.com/zh/#accessibility)
+描述了为提升包容性而设计的功能：清晰的元素视觉区分、简单的拖放操控、侧重逻辑策略（而非快速反应）的谜题、可调节的音量设置，以及图文并茂的信息呈现。
+
+### [音效与音乐](https://hole5.heytcm.com/zh/#sound-music)
+突出为增强解谜旅程、让玩家沉浸于元素世界而精心制作的迷人旋律和悦耳音效。
+
+### [社区互动](https://hole5.heytcm.com/zh/#community)
+提供社区链接和信息，供玩家交流、分享进度、讨论策略 (目前标记为"敬请期待")。
+
+### [常见问题](https://hole5.heytcm.com/zh/#faq)
+解答关于游戏的常见疑问，例如是否免费、五行元素是什么、是否需要下载、支持哪些设备以及如何获取帮助或报告错误。
+
+### [游戏页面](https://hole5.heytcm.com/zh/game)
+用户实际游玩"五行天坑"各个关卡的网页界面。
+
+### [关卡选择页面](https://hole5.heytcm.com/zh/level_select)
+允许玩家选择并开始已解锁的特定游戏关卡。
+
+### [菜单页面](https://hole5.heytcm.com/zh/menu)
+游戏主菜单，提供开始游戏、选择关卡或返回登陆页的选项。
+
+### [隐私政策](https://hole5.heytcm.com/zh/privacy)
+详细说明在游玩"五行天坑"时，如何收集、使用和保护用户数据。
+
+### [服务条款](https://hole5.heytcm.com/zh/terms)
+概述了使用"五行天坑"游戏服务的规则和用户协议。
 
 ## 用户价值
-- 无需编码即可快速验证商业想法。
-- 提供一个全面的工具包，用于快速构建和启动专业网站。
-- 自动化 SEO、多语言支持和其他复杂任务。
-- 提供模板和 AI 驱动的工具以简化开发。
-- 默认关注性能、可访问性和移动响应性。
+- 为广大玩家群体提供引人入胜且锻炼思维的益智体验。
+- 以互动和愉快的方式向玩家介绍中国传统的五行哲学。
+- 提供轻松且富有策略性的游戏循环，适合休闲玩家，也为寻求深度的玩家提供挑战。
+- 高度便捷，作为网页游戏，无需安装即可在大多数设备上即时畅玩。
+- 拥有可爱的元素精灵和沉浸式音效等吸引人的视觉和听觉设计。
+- 支持多种语言（中文和英文），覆盖更广泛的用户。
 
 ## 技术 SEO 优化
-- 动态注入 SEO 元标签、备用语言链接和 LD+JSON 结构化数据，以实现最佳搜索引擎可见性和多语言支持。
-- AI Scraper 友好的配置和全面的站点地图确保有效的抓取和索引。
+- 动态注入SEO元标签、hreflang备用语言链接以及LD+JSON结构化数据 (包括 `WebSite`, `Organization`, `BreadcrumbList`, `VideoGame`)，以实现最佳的搜索引擎可见性和多语言支持。
+- 友好的AI爬虫配置 (例如 `robots.txt`, `llms.txt`) 和全面的 `sitemap.xml` 站点地图，确保搜索引擎和AI代理能够有效抓取和索引。
+- 注重性能、W3C验证、无障碍(a11y)标准以及移动优先的响应式设计。

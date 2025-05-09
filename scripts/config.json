@@ -1,8 +1,8 @@
 {
-  "baseUrl": "https://websimstarter.borninsea.com",
+  "baseUrl": "https://hole5.heytcm.com",
   "defaultLang": "en",
-  "email":"support@borninsea.com",
-  "apptype":"app",
+  "email":"support@heytcm.com",
+  "apptype":"game app",
   "localepath":"locale",
   "robots": {
     "allowedBots": [

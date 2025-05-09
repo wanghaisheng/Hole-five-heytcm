@@ -46,7 +46,7 @@ function parseLangAndPageWithDefault(urlPath, defaultLang) {
 
 // Helper to get the path part from a full URL
 function getPathFromUrl(fullUrl) {
-  // e.g. https://visionboard.heymanifestation.com/app/home -> /app/home
+  // e.g. https://hole5.heytcm.com/app/home -> /app/home
   const url = new URL(fullUrl);
   return url.pathname;
 }

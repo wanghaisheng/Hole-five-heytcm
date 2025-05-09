@@ -1,0 +1,16 @@
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "Hole Wuxing",
+  "description": "Embark on a mystical journey in Hole Wuxing. Drag, drop, and discover the power of the five elements in this captivating puzzle adventure.",
+  "genre": ["Puzzle", "Strategy"],
+  "gamePlatform": ["PC", "Web Browser"],
+  "image": "https://hole5.heytcm.com/img/landing/hero-bg.png",
+  "url": "https://hole5.heytcm.com/game.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hole Wuxing"
+  },
+  "applicationCategory": "Game",
+  "operatingSystem": "All (Web-based)"
+} 

@@ -26,15 +26,17 @@
     // 从全局配置或页面元数据中获取 apptype
     // 此处为示例，实际项目中需要更完善的 apptype 获取机制
     const appConfig = window.ldJsonConfig || {};
-    const apptype = appConfig.apptype || 'app'; // 默认为 'app'
-    const pageType = appConfig.pageType || ''; // 页面类型，例如 'blog', 'product', 'faq'
+    // Try to get apptype from globalConfig (populated by config.json) first
+    const apptype = (window.globalConfig && window.globalConfig.apptype) || appConfig.apptype || 'app';
+    const pageType = (window.globalConfig && window.globalConfig.pageType) || appConfig.pageType || '';
 
     switch (apptype) {
         case 'app':
             types.push('SoftwareApplication', 'Review');
             break;
-        case 'game':
-            types.push('GameApplication', 'Review');
+        case 'game': // Exact match for 'game'
+        case 'game app': // Handle 'game app' from config.json
+            types.push('VideoGame', 'Review'); // Changed to VideoGame to match created JSON
             break;
         case 'product':
             types.push('Product', 'Review');

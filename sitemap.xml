@@ -1,19 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://websimstarter.borninsea.com/privacy</loc>
-        <lastmod>2025-05-08</lastmod>
+        <loc>https://hole5.heytcm.com/game</loc>
+        <lastmod>2025-05-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://websimstarter.borninsea.com/terms</loc>
-        <lastmod>2025-05-08</lastmod>
+        <loc>https://hole5.heytcm.com/level_select</loc>
+        <lastmod>2025-05-09</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://websimstarter.borninsea.com</loc>
+        <loc>https://hole5.heytcm.com/menu</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/privacy</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/terms</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/zh/game</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/zh/level_select</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/zh/menu</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/zh/privacy</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/zh/terms</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com</loc>
+        <lastmod>2025-05-09</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://hole5.heytcm.com/zh</loc>
         <lastmod>2025-05-09</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>

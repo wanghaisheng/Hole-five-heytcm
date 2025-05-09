@@ -1,9 +1,21 @@
 {
   "defaultLang": "en",
-  "langs": [],
+  "langs": [
+    "en",
+    "zh"
+  ],
   "urls": [
+    "/game",
+    "/level_select",
+    "/menu",
     "/privacy",
     "/terms",
-    "/"
+    "/zh/game",
+    "/zh/level_select",
+    "/zh/menu",
+    "/zh/privacy",
+    "/zh/terms",
+    "/",
+    "/zh"
   ]
 }

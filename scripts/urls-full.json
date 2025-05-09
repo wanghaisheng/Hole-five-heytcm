@@ -1,12 +1,24 @@
 {
   "defaultLang": "en",
   "langs": [
-    ""
+    "",
+    "en",
+    "zh"
   ],
   "urls": [
-    "https://websimstarter.borninsea.com/privacy",
-    "https://websimstarter.borninsea.com/terms",
-    "https://websimstarter.borninsea.com/",
-    "https://websimstarter.borninsea.com/index.html"
+    "https://hole5.heytcm.com/game",
+    "https://hole5.heytcm.com/level_select",
+    "https://hole5.heytcm.com/menu",
+    "https://hole5.heytcm.com/privacy",
+    "https://hole5.heytcm.com/terms",
+    "https://hole5.heytcm.com/zh/game",
+    "https://hole5.heytcm.com/zh/level_select",
+    "https://hole5.heytcm.com/zh/menu",
+    "https://hole5.heytcm.com/zh/privacy",
+    "https://hole5.heytcm.com/zh/terms",
+    "https://hole5.heytcm.com/",
+    "https://hole5.heytcm.com/zh",
+    "https://hole5.heytcm.com/index.html",
+    "https://hole5.heytcm.com/zh/index.html"
   ]
 }

@@ -1,0 +1,353 @@
+:root {
+    --color-metal: gold;
+    --color-wood: forestgreen;
+    --color-water: dodgerblue;
+    --color-fire: crimson;
+    --color-earth: peru; /* saddlebrown or peru for a good earthy tone */
+    --color-mystery: grey;
+
+    --person-size: 30px;
+    --hole-size: 70px;
+    --source-hole-size: 80px;
+    --obstacle-size: 60px;
+    --tunnel-size: 50px; /* New variable for tunnels */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    overflow: hidden; /* Prevent scrollbars during UFO animation */
+}
+
+#game-container {
+    width: 90vw;
+    max-width: 800px;
+    height: 90vh;
+    max-height: 600px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#collection-bay {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+}
+
+.collection-slot {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.collection-slot img {
+    width: 20px;
+    height: 20px;
+}
+.collection-slot.complete {
+    background-color: lightgreen !important; /* Use important if specific element colors override */
+    color: black;
+}
+
+
+#game-board {
+    flex-grow: 1;
+    position: relative; /* For absolute positioning of game elements */
+    background-image: linear-gradient(to bottom, #e6f7ff, #ffffff); /* Light blue to white sky */
+}
+
+#source-bay {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background-color: #d2b48c; /* Earthy tone for source area */
+    border-top: 1px solid #aaa;
+    min-height: calc(var(--source-hole-size) + 20px);
+}
+
+.hole {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.source-hole {
+    width: var(--source-hole-size);
+    height: var(--source-hole-size);
+    border: 3px dashed #555;
+    position: relative; /* For person positioning inside */
+    cursor: grab;
+    background-color: rgba(0,0,0,0.1); /* slight indication of hole */
+}
+
+.target-hole {
+    width: var(--hole-size);
+    height: var(--hole-size);
+    border: 3px solid #333;
+    position: absolute; /* Positioned on game board */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.target-hole.full {
+    animation: pulse-full 1s infinite;
+}
+.target-hole.accepts-drag {
+    box-shadow: 0 0 15px 5px var(--highlight-color, yellow);
+    transform: scale(1.1);
+}
+.target-hole.interaction-pulse { /* New class for visual feedback on generation */
+    animation: pulse-interaction 0.8s ease-out;
+}
+@keyframes pulse-full {
+    0% { box-shadow: 0 0 10px 2px var(--pulse-color, white); }
+    50% { box-shadow: 0 0 20px 8px var(--pulse-color, white); }
+    100% { box-shadow: 0 0 10px 2px var(--pulse-color, white); }
+}
+@keyframes pulse-interaction { /* Animation for generation effect */
+    0% { transform: scale(1.1); box-shadow: 0 0 15px 5px var(--highlight-color, yellow); }
+    50% { transform: scale(1.2); box-shadow: 0 0 25px 10px var(--highlight-color, yellow); }
+    100% { transform: scale(1.1); box-shadow: 0 0 15px 5px var(--highlight-color, yellow); }
+}
+.hole-capacity {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+
+.person {
+    width: var(--person-size);
+    height: var(--person-size);
+    border-radius: 50%;
+    position: absolute; /* Initially in source, then on board */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.1s ease-out; /* For smooth movement in groups */
+    z-index: 10; /* Above holes */
+}
+.person.dragging {
+    z-index: 1000; /* Above everything else */
+    pointer-events: none; /* So it doesn't interfere with mousemove on game-board */
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+/* Individual person appearance if no image */
+.person[data-element="METAL"] { background-color: var(--color-metal); }
+.person[data-element="WOOD"] { background-color: var(--color-wood); }
+.person[data-element="WATER"] { background-color: var(--color-water); }
+.person[data-element="FIRE"] { background-color: var(--color-fire); }
+.person[data-element="EARTH"] { background-color: var(--color-earth); }
+.person[data-element="MYSTERY"] { background-color: var(--color-mystery); }
+
+
+/* Element-specific styling for holes and collection slots */
+[data-element="METAL"] { background-color: var(--color-metal); border-color: darken(var(--color-metal), 20%); --pulse-color: var(--color-metal);}
+[data-element="WOOD"] { background-color: var(--color-wood); border-color: darken(var(--color-wood), 20%); --pulse-color: var(--color-wood);}
+[data-element="WATER"] { background-color: var(--color-water); border-color: darken(var(--color-water), 20%); --pulse-color: var(--color-water);}
+[data-element="FIRE"] { background-color: var(--color-fire); border-color: darken(var(--color-fire), 20%); --pulse-color: var(--color-fire);}
+[data-element="EARTH"] { background-color: var(--color-earth); border-color: darken(var(--color-earth), 20%); --pulse-color: var(--color-earth);}
+
+.target-hole[data-element="METAL"] { background-image: url('hole_texture_metal.png'), linear-gradient(to bottom right, gold, lightgoldenrodyellow); }
+.target-hole[data-element="WOOD"] { background-image: url('hole_texture_wood.png'), linear-gradient(to bottom right, forestgreen, lightgreen); }
+.target-hole[data-element="WATER"] { background-image: url('hole_texture_water.png'), linear-gradient(to bottom right, dodgerblue, lightblue); }
+.target-hole[data-element="FIRE"] { background-image: url('hole_texture_fire.png'), linear-gradient(to bottom right, crimson, lightcoral); }
+.target-hole[data-element="EARTH"] { background-image: url('hole_texture_earth.png'), linear-gradient(to bottom right, peru, sandybrown); }
+
+
+.source-hole[data-element="METAL"]::after { content: "金"; }
+.source-hole[data-element="WOOD"]::after { content: "木"; }
+.source-hole[data-element="WATER"]::after { content: "水"; }
+.source-hole[data-element="FIRE"]::after { content: "火"; }
+.source-hole[data-element="EARTH"]::after { content: "土"; }
+.source-hole::after {
+    position: absolute;
+    bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.6);
+}
+
+
+#ufo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px; /* Adjust as needed */
+    height: 70px; /* Adjust as needed */
+    z-index: 2000; /* Above everything */
+    pointer-events: none; /* Don't interfere with clicks */
+    display: none; /* Hidden by default */
+}
+#ufo {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+#ufo.collecting {
+    /* Animation handled by JS for position, can add CSS animations too */
+    /* e.g. wobble or glow */
+}
+
+
+.obstacle {
+    width: var(--obstacle-size);
+    height: var(--obstacle-size);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 50; /* Above board, below people being dragged */
+}
+.obstacle.wood-obstacle {
+    background-image: url('obstacle_wood_raw.png');
+}
+.obstacle.metal-obstacle {
+    background-image: url('obstacle_metal_ore.png');
+}
+.obstacle.water-obstacle { /* Represents Ice */
+    background-image: url('obstacle_ice_wall.png');
+}
+.obstacle.fire-obstacle {
+    background-image: url('obstacle_fire_blaze.png');
+}
+.obstacle.earth-obstacle {
+    background-image: url('obstacle_earth_boulder.png');
+}
+
+
+/* Tunnel Styling */
+.tunnel-entry, .tunnel-exit {
+    width: var(--tunnel-size);
+    height: var(--tunnel-size);
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%; /* Make them circular if not using specific portal images */
+    z-index: 5; /* Below people being dragged, above board */
+    /* Default appearance if images don't load or are not set */
+    /* box-shadow: inset 0 0 10px rgba(0,0,0,0.5); */
+}
+
+.tunnel-entry {
+    /* background-color: rgba(50, 0, 100, 0.7); Example: Dark purple */
+    /* border: 2px dashed #300060; */
+}
+
+.tunnel-exit {
+    /* background-color: rgba(100, 0, 200, 0.7); Example: Lighter purple */
+    /* border: 2px dashed #6000C0; */
+}
+
+
+#temp-message {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 3000;
+    transition: opacity 0.5s ease-in-out;
+}
+#temp-message.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#reset-level-button, #back-to-menu-button {
+    position: absolute;
+    bottom: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 2500;
+    font-size: 14px;
+}
+
+#reset-level-button {
+    right: 10px;
+    background-color: #ffc107; /* Yellow */
+}
+#reset-level-button:hover {
+    background-color: #e0a800;
+}
+
+#back-to-menu-button {
+    left: 10px;
+    background-color: #6c757d; /* Grey */
+    color: white;
+}
+#back-to-menu-button:hover {
+    background-color: #5a6268;
+}
+
+
+#level-complete-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+    z-index: 4000;
+}
+#level-complete-message.hidden {
+    display: none;
+}
+#level-complete-message h2 {
+    color: var(--color-wood); /* Or a general success color */
+    margin-top: 0;
+}
+#level-complete-message button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--color-fire);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+#level-complete-message button:hover {
+    opacity: 0.9;
+}

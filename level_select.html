@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hole Wuxing - Level Select</title>
+    <link rel="stylesheet" href="css/level-select-style.css">
+    <link rel="icon" href="img/landing/favicon.png" type="image/png">
+</head>
+<body>
+    <div class="level-select-container">
+        <h1>Select Level</h1>
+        <div class="level-grid">
+            <!-- Levels will be populated by JavaScript -->
+        </div>
+        <a href="menu.html" class="back-to-menu-button">Back to Main Menu</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const levelGrid = document.querySelector('.level-grid');
+            const totalLevelsInScript = 60; // Updated: Levels 0-59 are defined
+            const displayUpToLevel = 80; // Total levels to display icons for
+
+            for (let i = 1; i <= displayUpToLevel; i++) {
+                const levelItem = document.createElement('a');
+                levelItem.classList.add('level-item');
+                levelItem.textContent = i;
+
+                if (i <= totalLevelsInScript) {
+                    levelItem.href = `game.html?level=${i - 1}`; // Level index is i-1
+                } else {
+                    levelItem.classList.add('coming-soon');
+                    levelItem.href = '#';
+                    levelItem.setAttribute('aria-disabled', 'true');
+                    levelItem.title = 'Coming Soon';
+                    const comingSoonSpan = document.createElement('span');
+                    comingSoonSpan.classList.add('coming-soon-text');
+                    comingSoonSpan.textContent = 'Soon';
+                    levelItem.appendChild(comingSoonSpan);
+                }
+                levelGrid.appendChild(levelItem);
+            }
+        });
+    </script>
+    <script src="js/level-select.js"></script>
+    <script src="js/bootstrap-scripts.js"></script>
+</body>
+</html>

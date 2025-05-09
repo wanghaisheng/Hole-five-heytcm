@@ -1,0 +1,594 @@
+:root {
+    --primary-color: #2c3e50; /* Dark Blue-Gray */
+    --secondary-color: #e74c3c; /* Red-Orange for CTAs */
+    --accent-color: #f1c40f; /* Yellow for highlights */
+    --background-color: #ecf0f1; /* Light Gray */
+    --text-color: #34495e; /* Dark Gray-Blue */
+    --light-text-color: #ffffff;
+    --font-family: 'Arial', sans-serif; /* Placeholder, consider a more thematic font */
+
+    --color-metal: gold;
+    --color-wood: forestgreen;
+    --color-water: dodgerblue;
+    --color-fire: crimson;
+    --color-earth: peru;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent, typically light-text-color */
+}
+.logo a:hover span {
+    color: var(--accent-color); /* Or any other hover effect */
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+.logo span {
+    color: var(--light-text-color); /* Default color for the text part */
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.language-switcher select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--accent-color);
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    font-family: var(--font-family);
+}
+.language-switcher select:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+#hero {
+    background-image: url('../img/landing/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 6rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.hero-content {
+    background-color: rgba(0,0,0,0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--light-text-color); /* Ensure contrast */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Pill shape */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #c0392b; /* Darker Red-Orange */
+    transform: translateY(-2px);
+}
+.cta-button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    margin: 0.5rem auto 0;
+}
+
+#features .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    /* Animation initial state */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), 
+                transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), 
+                box-shadow 0.3s ease;
+}
+.feature-item.is-visible,
+.animate-on-scroll.is-visible .developer-content, /* Target nested animated content */
+.animate-on-scroll.is-visible .community-links, /* Target nested animated content */
+.animate-on-scroll.is-visible .how-to-play-content, 
+.animate-on-scroll.is-visible .world-of-wuxing-content, 
+.animate-on-scroll.is-visible .play-anywhere-content, 
+.animate-on-scroll.is-visible .accessibility-content, 
+.animate-on-scroll.is-visible .sound-music-content,
+.animate-on-scroll.is-visible .stay-updated-content, /* New section content */
+.animate-on-scroll.is-visible .faq-content 
+ {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Apply initial animation state to new sections if they are direct children of animate-on-scroll */
+.animate-on-scroll .how-to-play-content,
+.animate-on-scroll .world-of-wuxing-content,
+.animate-on-scroll .play-anywhere-content,
+.animate-on-scroll .accessibility-content,
+.animate-on-scroll .sound-music-content,
+.animate-on-scroll .stay-updated-content, /* New section content */
+.animate-on-scroll .faq-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.645, 0.045, 0.355, 1), 
+                transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px) !important; /* Ensure hover transform overrides animation transform if needed */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.feature-item img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* How to Play Section */
+#how-to-play .how-to-play-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: left;
+}
+.htp-step {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.htp-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.htp-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+.htp-ufo-icon { /* Specific styling for UFO icon if it's wider */
+    width: 80px; 
+}
+.htp-step h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+.htp-step p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+#gameplay .gameplay-video-container {
+    margin-top: 2rem;
+}
+
+#developer-passion .developer-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+#developer-passion .developer-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain; 
+    border: 3px solid var(--accent-color);
+}
+
+/* World of Wuxing Section */
+#world-of-wuxing .world-of-wuxing-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: left;
+}
+.wow-image {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    max-width: 150px; 
+    height: auto;
+    border-radius: 8px;
+}
+.wuxing-cycle-diagram-container {
+    margin: 1.5rem auto; 
+    max-width: 350px; 
+}
+.wuxing-cycle-diagram {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+#world-of-wuxing p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+#world-of-wuxing p:last-child {
+    margin-bottom: 0;
+}
+
+/* Play Anywhere Section */
+#play-anywhere .play-anywhere-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: center; /* Center content within this box */
+}
+.play-anywhere-icon { /* Now specifically for the new multiplatform icon */
+    width: 80px; /* Adjust if new icon has different ideal size */
+    height: 80px;
+    margin-bottom: 1rem;
+    object-fit: contain; 
+}
+#play-anywhere p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 600px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0; 
+}
+
+/* Accessibility Section */
+#accessibility .accessibility-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: left;
+}
+.accessibility-icon { /* Now specifically for the new inclusive icon */
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    width: 80px; /* Adjust if new icon has different ideal size */
+    height: 80px;
+    object-fit: contain;
+}
+#accessibility ul {
+    list-style-type: disc; 
+    padding-left: 25px; 
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+#accessibility li {
+    margin-bottom: 0.75rem; 
+}
+#accessibility p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+#accessibility p:last-child {
+    margin-bottom: 0;
+}
+
+/* Sound & Music Section */
+#sound-music .sound-music-content {
+    background-color: #f9f9f9; 
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-top: 2rem;
+    text-align: center;
+}
+.sound-music-icon {
+    width: 70px; 
+    height: 70px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+#sound-music p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+}
+#sound-music p:last-child {
+    margin-bottom: 0;
+}
+
+/* Stay Updated Section - New Section */
+#stay-updated .stay-updated-content {
+    background-color: #fff; /* Or a slightly different shade like #fdfdfd */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: center;
+}
+.stay-updated-icon {
+    width: 70px; 
+    height: 70px;
+    margin-bottom: 1rem;
+    object-fit: contain;
+}
+#stay-updated p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 700px; /* Consistent with other similar sections */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0; /* If it's the only paragraph */
+}
+
+#community .community-links {
+    margin-top: 2rem;
+}
+
+.community-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--light-text-color);
+    font-weight: bold;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+.community-link:hover {
+    transform: translateY(-2px);
+}
+.community-link:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.community-link.discord {
+    background-color: #7289DA; /* Discord Blue */
+}
+.community-link.twitter {
+    background-color: #1DA1F2; /* Twitter Blue */
+}
+
+.community-link.coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+    /* filter: grayscale(50%); */ /* Optional: desaturate colors */
+}
+.community-link.coming-soon:hover {
+    transform: none; /* Disable hover effect */
+    opacity: 0.6; /* Keep opacity consistent on hover */
+}
+.community-more-soon {
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* FAQ Section */
+#faq .faq-content {
+    margin-top: 2rem;
+    text-align: left;
+}
+.faq-item {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease;
+}
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.faq-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 0.5rem;
+}
+
+.footer-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.footer-links a:focus-visible {
+    outline: 2px solid var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+    .language-switcher {
+        margin-top: 1rem;
+    }
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+    #hero p {
+        font-size: 1rem;
+    }
+    .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+    section h2 {
+        font-size: 2rem;
+    }
+    #developer-passion .developer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    #how-to-play .how-to-play-content {
+        grid-template-columns: 1fr; /* Stack steps on smaller screens */
+    }
+}

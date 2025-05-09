@@ -1,73 +1,97 @@
-# WebSim Vibe Coding Starter - Full Website Introduction
-> WebSim Vibe Coding Starter: Build a modern, SEO-optimized website in 5 minutes. AI-powered, highly automated, responsive, SEO best practices, creative and futuristic SaaS tool.
+# Hole Wuxing - Mystical Puzzle Adventure
+> Master the Elements, Solve the Path! Drag, drop, and discover the power of the five elements in this captivating puzzle adventure.
 
 ## Website Background
-WebSim Vibe Coding Starter is designed for entrepreneurs, product managers, and innovators with limited coding experience. It allows users to validate business ideas and launch professional websites within 5 minutes without needing a coding background. It includes built-in SaaS tools, landing page and prototype design prompt templates for gaming apps, SEO optimization prompts, and common automation scripts to efficiently transform ideas into reality.
+Hole Wuxing is a casual puzzle strategy game inspired by the traditional Chinese philosophy of Wuxing (the Five Elements: Metal, Wood, Water, Fire, and Earth). Players engage in intuitive drag-and-drop gameplay, guiding elemental spirits to their corresponding holes. The game aims to provide a relaxing yet mentally stimulating experience, blending simple mechanics with deeper strategic possibilities rooted in elemental interactions (generation and overcoming cycles). It's designed for puzzle enthusiasts and those interested in culturally themed games, playable directly in web browsers.
 
-## Main URLs (from sitemap.xml)
-- https://websimstarter.borninsea.com/
-  - The main landing page for WebSim Vibe Coding Starter.
-- https://websimstarter.borninsea.com/#features
-  - Section detailing the features of the starter kit.
-- https://websimstarter.borninsea.com/#playground
-  - Interactive playground to experience the workflow.
-- https://websimstarter.borninsea.com/#showcase
-  - Showcase of projects built with WebSim Vibe.
-- https://websimstarter.borninsea.com/#future
-  - Vision for future development and advantages.
-- https://websimstarter.borninsea.com/about.html
-  - Information about the team and project.
-- https://websimstarter.borninsea.com/career.html
-  - Career opportunities.
-- https://websimstarter.borninsea.com/privacy.html
-  - Details the application's privacy policy.
-- https://websimstarter.borninsea.com/terms.html
-  - Outlines the terms of service.
+## Main URLs (from sitemap.xml and site structure)
+- https://hole5.heytcm.com/
+  - The main landing page for the Hole Wuxing game.
+- https://hole5.heytcm.com/#features
+  - Section detailing the core game features.
+- https://hole5.heytcm.com/#how-to-play
+  - Section explaining the game mechanics.
+- https://hole5.heytcm.com/#gameplay
+  - Section for gameplay previews (e.g., videos/GIFs).
+- https://hole5.heytcm.com/#community
+  - Section for community links and information.
+- https://hole5.heytcm.com/#faq
+  - Section providing answers to frequently asked questions.
+- https://hole5.heytcm.com/game
+  - The main game interface where levels are played.
+- https://hole5.heytcm.com/level_select
+  - Page for selecting game levels.
+- https://hole5.heytcm.com/menu
+  - The main game menu for navigation.
+- https://hole5.heytcm.com/privacy
+  - Details the game's privacy policy.
+- https://hole5.heytcm.com/terms
+  - Outlines the terms of service for the game.
+- https://hole5.heytcm.com/zh/
+  - The Chinese version of the main landing page.
+- https://hole5.heytcm.com/zh/game
+  - The Chinese version of the game interface.
+- (Other /zh/ counterparts for menu, level_select, privacy, terms are also available as per sitemap)
 
 ## Content Categories
-### [Homepage](https://websimstarter.borninsea.com/)
-Introduces WebSim Vibe Coding Starter, its purpose, and core value proposition. Highlights key benefits like no-code development and rapid deployment.
+### [Homepage](https://hole5.heytcm.com/)
+Introduces "Hole Wuxing," its mystical theme, and core puzzle adventure. Showcases key features, how to play, accessibility, and invites users to "Play Now!"
 
-### [Features](https://websimstarter.borninsea.com/#features)
-Lists key features including:
-- No-code full site generation
-- 5-minute product concept validation
-- Entrepreneur/Product Manager friendly
-- SaaS/Game App landing page & prototype design prompt templates
-- SEO optimization dedicated prompt templates
-- Common automation scripts (generation, deployment, SEO submission)
-- Multi-language support & auto-generated sitemaps
-- Automated SEO: IndexNow, Bing, Google, metadata, validation
-- AI-powered blog & image generation
-- PWA & mobile-first, blazing fast
-- Keyword research, analytics, clarity
-- Real user management (Cloudflare Workers)
-- AI Scraper friendly robots.txt & llms.txt auto-generation
+### [Features](https://hole5.heytcm.com/#features)
+Details the primary gameplay elements:
+- **Five Elements System:** Explore relationships of Metal, Wood, Water, Fire, and Earth.
+- **Engaging Puzzles:** Drag and drop elemental spirits to solve increasingly complex levels.
+- **Mystical Collection:** UFOs collect spirits from filled holes to meet level goals.
 
-### [Interactive Playground](https://websimstarter.borninsea.com/#playground)
-A four-step guided experience:
-1.  **Research on Grok:** Research user complaints and pain points.
-2.  **Generate PRD.md with Google AI Studio:** Create a Product Requirements Document.
-3.  **Generate Site with WebSim:** Use PRD and prompts to generate the website.
-4.  **Deploy & Go Live:** Deploy the site to Cloudflare or a static host.
+### [How to Play](https://hole5.heytcm.com/#how-to-play)
+Explains the game mechanics:
+- **Drag & Group:** Click and drag groups of elemental spirits.
+- **Match & Fill:** Guide spirits to target holes of the same element.
+- **UFO Collection:** UFOs retrieve spirits once a hole is filled.
+- **Elemental Powers:** Utilize Wuxing cycles for clearing obstacles or gaining bonuses.
 
-### [Showcase](https://websimstarter.borninsea.com/#showcase)
-Displays examples of websites and applications built using WebSim Vibe Coding Starter, such as AI SaaS landing pages and multi-language blogs.
+### [Gameplay Preview](https://hole5.heytcm.com/#gameplay)
+A section intended to showcase the game in action, currently featuring a placeholder for a video or GIF.
 
-### [Future Vision](https://websimstarter.borninsea.com/#future)
-Outlines future advantages and the project's vision, including:
-- Continuous AI integration for smarter site generation.
-- Always up-to-date SEO automation.
-- Bold, creative UI/UX with GSAP-powered micro-interactions.
-- Scalability from MVP to enterprise.
+### [Play Anywhere](https://hole5.heytcm.com/#play-anywhere)
+Emphasizes that Hole Wuxing is a web-based game, playable directly in browsers on most modern desktops, laptops, tablets, and smartphones without needing downloads.
+
+### [Accessibility](https://hole5.heytcm.com/#accessibility)
+Describes features designed for broader accessibility, such as clear visual distinctions, simple drag-and-drop controls, logic-focused puzzles (not reflex-based), adjustable audio settings, and text supported by visual cues.
+
+### [Sound & Music](https://hole5.heytcm.com/#sound-music)
+Highlights the enchanting melodies and satisfying sound effects crafted to enhance the puzzle-solving journey and immerse players in the elemental world.
+
+### [Community](https://hole5.heytcm.com/#community)
+Provides links and information for players to connect, share progress, and discuss strategies (currently marked as "Coming Soon").
+
+### [FAQ](https://hole5.heytcm.com/#faq)
+Addresses common questions regarding the game, such as its free-to-play nature, the Wuxing elements, download requirements, device compatibility, and how to get help or report bugs.
+
+### [Game Page](https://hole5.heytcm.com/game)
+The actual web interface where users play the Hole Wuxing game levels.
+
+### [Level Select Page](https://hole5.heytcm.com/level_select)
+Allows players to choose and start specific game levels they have unlocked.
+
+### [Menu Page](https://hole5.heytcm.com/menu)
+The main menu of the game, providing options to start, select levels, or return to the landing page.
+
+### [Privacy Policy](https://hole5.heytcm.com/privacy)
+Contains detailed information about how user data is collected, used, and protected while playing Hole Wuxing.
+
+### [Terms of Service](https://hole5.heytcm.com/terms)
+Outlines the rules and user agreements for using the Hole Wuxing game service.
 
 ## User Value
-- Enables rapid validation of business ideas without coding.
-- Provides a comprehensive toolkit for building and launching professional websites quickly.
-- Automates SEO, multi-language support, and other complex tasks.
-- Offers templates and AI-powered tools to streamline development.
-- Focuses on performance, accessibility, and mobile-responsiveness by default.
+- Provides an engaging and mentally stimulating puzzle experience suitable for a wide audience.
+- Introduces players to the traditional Chinese philosophy of Wuxing (Five Elements) in an interactive and enjoyable way.
+- Offers a relaxing yet strategic gameplay loop, perfect for casual play sessions with depth for those who seek it.
+- Highly accessible, being a web-based game playable instantly on most devices without installation.
+- Features an appealing visual style with cute elemental spirits and immersive sound design.
+- Supports multiple languages (English and Chinese) for a broader reach.
 
 ## Technical SEO Enhancements
-- Dynamic injection of SEO meta tags, alternate language links, and LD+JSON structured data for optimal search engine visibility and multilingual support.
-- AI Scraper-friendly configurations and a comprehensive sitemap ensure effective crawling and indexing.
+- Dynamic injection of SEO meta tags, alternate language links (`hreflang`), and LD+JSON structured data (including `WebSite`, `Organization`, `BreadcrumbList`, `VideoGame`) for optimal search engine visibility and multilingual support.
+- AI Scraper-friendly configurations (e.g., `robots.txt`, `llms.txt`) and a comprehensive `sitemap.xml` are in place to ensure effective crawling and indexing by search engines and AI agents.
+- Focus on performance, W3C validation, accessibility (a11y) standards, and mobile-first responsive design.
